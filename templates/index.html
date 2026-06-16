@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KanunAI - Nepal Legal Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚖️ KanunAI</h1>
+            <p class="subtitle">Nepal Legal Assistant - Ask questions about Nepali Laws</p>
+        </header>
+
+        <main>
+            <div class="search-box">
+                <div class="language-toggle">
+                    <button class="lang-btn active" data-lang="english">English</button>
+                    <button class="lang-btn" data-lang="nepali">नेपाली</button>
+                </div>
+
+                <div class="input-group">
+                    <input
+                        type="text"
+                        id="questionInput"
+                        placeholder="E.g., What is the punishment for cybercrime in Nepal?"
+                        class="search-input"
+                    />
+                    <button id="askBtn" class="ask-button">Ask</button>
+                </div>
+            </div>
+
+            <div id="results" class="results-container" style="display: none;">
+                <div id="loading" class="loading" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Searching legal documents...</p>
+                </div>
+
+                <div id="resultContent" class="result-content">
+                    <div class="result-card">
+                        <h2>Answer</h2>
+                        <p id="answerText" class="answer-text"></p>
+                    </div>
+
+                    <div class="result-details">
+                        <div class="detail-box">
+                            <h3>Section</h3>
+                            <p id="sectionNumber" class="detail-content">—</p>
+                        </div>
+
+                        <div class="detail-box">
+                            <h3>Source Act</h3>
+                            <p id="citation" class="detail-content">—</p>
+                        </div>
+                    </div>
+
+                    <div id="nepaliText" class="nepali-section" style="display: none;">
+                        <h3>नेपाली पाठ (Nepali Text)</h3>
+                        <p id="nepaliContent" class="nepali-content"></p>
+                    </div>
+                </div>
+
+                <div id="error" class="error-message" style="display: none;"></div>
+            </div>
+
+            <div class="info-box">
+                <h3>Available Acts (MVP)</h3>
+                <ul>
+                    <li>विद्युतीय कारोबार ऐन, २०६३</li>
+                    <li>मुलुकी अपराध संहिता, २०७४</li>
+                    <li>मुलुकी देवानी संहिता, २०७४</li>
+                    <li>श्रम ऐन, २०७४</li>
+                    <li>उपभोक्ता संरक्षण ऐन, २०७५</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>📝 Personal Learning Project | Data Source: <a href="https://lawcommission.gov.np/" target="_blank">Law Commission of Nepal</a></p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

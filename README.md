@@ -1,12 +1,10 @@
 # KanunAI - Nepal Legal Assistant Webapp
 
-Your Flask + HTML/CSS/JS webapp is ready! Here's what's been created:
-
 ## Project Structure
 
 ```
 kanunai/
-├── app.py                 # Flask backend (main app logic)
+├── app.py                 # Flask backend
 ├── requirements.txt       # Python dependencies
 ├── templates/
 │   └── index.html        # Main web interface
@@ -15,7 +13,7 @@ kanunai/
 │   │   └── style.css     # Styling (gradient UI)
 │   └── js/
 │       └── script.js     # Frontend interactivity
-└── data/                 # (Create this folder for PDFs)
+└── data/                 
 ```
 
 ## Setup Instructions
@@ -41,50 +39,16 @@ python app.py
 
 Visit: `http://localhost:5000`
 
-## What's Next?
 
-### Step 1: Download & Extract PDFs
-- Download the 5 acts from: https://lawcommission.gov.np/pages/alphabetical-index-of-acts/
-- Save them in a `data/pdfs/` folder
+## Currently working on Features
 
-### Step 2: Extract Text from Nepali PDFs
-Script needed to:
-- Extract text from PDFs using `pdfplumber`
-- Parse into sections
-- Store in searchable format
+-Clean, modern UI with language toggle (English/Nepali)
+-Search input with animated feedback
+-Loading states and error handling
+-Results display (Answer, Section, Citation)
+-Responsive design (mobile-friendly)
+-Flask backend scaffold with API ready
 
-### Step 3: Implement Search
-- Vector embeddings or keyword search
-- Integration with document storage
-
-### Step 4: Integrate Claude API
-- Translate Nepali → English
-- Generate explanations
-- Handle citations
-
-## Current Features
-
-✅ Clean, modern UI with language toggle (English/Nepali)
-✅ Search input with animated feedback
-✅ Loading states and error handling
-✅ Results display (Answer, Section, Citation)
-✅ Responsive design (mobile-friendly)
-✅ Flask backend scaffold with API ready
-
-## TODO - Document Processing
-
-The `LegalAssistant` class in `app.py` has these methods ready:
-- `search_documents(query)` - Find relevant legal sections
-- `translate_to_english(nepali_text)` - Use Claude to translate
-- `generate_explanation(question, section)` - Create simplified answers
-- `answer_question(question)` - Main pipeline
-
-## Free Tier Claude API Notes
-
-For 5 acts (MVP):
-- Extract + translate PDFs: ~50-100 API calls (one-time)
-- Per user query: 1-2 API calls
-- Free tier should handle this easily
 
 ## Architecture
 
@@ -105,4 +69,3 @@ Claude API
 Response back to UI
 ```
 
-Ready to integrate your datasets! 🚀

@@ -6,7 +6,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #092191 0%, #bd1b1b 100%);
     min-height: 100vh;
     padding: 20px;
 }
@@ -67,14 +67,14 @@ main {
 }
 
 .lang-btn:hover {
-    border-color: #667eea;
-    color: #667eea;
+    border-color: #092191;
+    color: #092191;
 }
 
 .lang-btn.active {
-    background: #667eea;
+    background: #092191;
     color: white;
-    border-color: #667eea;
+    border-color: #092191;
 }
 
 .input-group {
@@ -93,12 +93,12 @@ main {
 
 .search-input:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #092191;
 }
 
 .ask-button {
     padding: 15px 40px;
-    background: #667eea;
+    background: #bd1b1b;
     color: white;
     border: none;
     border-radius: 8px;
@@ -109,7 +109,7 @@ main {
 }
 
 .ask-button:hover {
-    background: #5568d3;
+    background: #092191;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
 }
